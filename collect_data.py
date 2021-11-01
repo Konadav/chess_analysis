@@ -17,11 +17,11 @@ def main():
         
     # Create a pgn file that represents all of my games
     games_string = "\n\n".join(my_pgn_games)
-    file = open("/Users/koplo/Documents/Chess/game.pgn", "w")
+    file = open("/Users/koplo/Documents/Projects/chess_analysis/game.pgn", "w")
     file.write(games_string)
      
     # Create two CSV files - one of games data and one of moves data  
-    pgn_data = PGNData("/Users/koplo/Documents/Chess/game.pgn")
+    pgn_data = PGNData("//Users/koplo/Documents/Projects/chess_analysis/game.pgn")
     result = pgn_data.export()
     result.print_summary()
 
